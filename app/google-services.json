@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "755695220648",
+    "project_id": "test-c6919",
+    "storage_bucket": "test-c6919.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755695220648:android:2d646b2d91b25597970f9d",
+        "android_client_info": {
+          "package_name": "com.example.aynur_bulatov_testandroid_vacc_2024"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT2Neow5yldxZRyV5_8MUtTO8VH-NYFx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
