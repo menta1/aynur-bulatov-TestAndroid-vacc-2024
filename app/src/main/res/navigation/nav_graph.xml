@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.auth.ui.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsScreenFragment"
+        android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.detailsScreen.ui.DetailsScreenFragment"
+        android:label="fragment_details_screen"
+        tools:layout="@layout/fragment_details_screen" >
+        <action
+            android:id="@+id/action_detailsScreenFragment_to_shoppingCardFragment"
+            app:destination="@id/shoppingCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingCardFragment"
+        android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.shoppingCard.ui.ShoppingCardFragment"
+        android:label="fragment_shopping_card"
+        tools:layout="@layout/fragment_shopping_card" />
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.mainScreen.ui.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_detailsScreenFragment"
+            app:destination="@id/detailsScreenFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_shoppingCardFragment"
+            app:destination="@id/shoppingCardFragment" />
+    </fragment>
+</navigation>
