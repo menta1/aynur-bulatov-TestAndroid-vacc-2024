@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/authFragment">
+    app:startDestination="@id/mainScreenFragment">
 
     <fragment
         android:id="@+id/authFragment"
@@ -21,13 +21,13 @@
         tools:layout="@layout/fragment_details_screen" >
         <action
             android:id="@+id/action_detailsScreenFragment_to_shoppingCardFragment"
-            app:destination="@id/shoppingCardFragment" />
+            app:destination="@id/shoppingCartFragment" />
     </fragment>
     <fragment
-        android:id="@+id/shoppingCardFragment"
-        android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.shoppingCard.ui.ShoppingCardFragment"
+        android:id="@+id/shoppingCartFragment"
+        android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.shoppingCart.ui.ShoppingCartFragment"
         android:label="fragment_shopping_card"
-        tools:layout="@layout/fragment_shopping_card" />
+        tools:layout="@layout/fragment_shopping_cart" />
     <fragment
         android:id="@+id/mainScreenFragment"
         android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.mainScreen.ui.MainScreenFragment"
@@ -38,6 +38,11 @@
             app:destination="@id/detailsScreenFragment" />
         <action
             android:id="@+id/action_mainScreenFragment_to_shoppingCardFragment"
-            app:destination="@id/shoppingCardFragment" />
+            app:destination="@id/shoppingCartFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.account.ui.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
 </navigation>
