@@ -1,6 +1,6 @@
 Создать структуру проекта 30 минут -> 20 минут
 
-Navigation 30 минут
+Navigation 30 минут -> 14 минут
 
 Main screen Domain & Data 30 минут
 Main screen UI  20 минут
