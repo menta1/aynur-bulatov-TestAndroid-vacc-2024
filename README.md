@@ -1,4 +1,4 @@
-### [Скачать "Playlist-Maker"]([https://github.com/menta1/Playlist-Maker/releases/download/pet_proj/Playlist.Maker.apk](https://github.com/menta1/aynur-bulatov-TestAndroid-vacc-2024/releases/download/qwe/app-debug.apk))
+### [Скачать "Приложение"](https://github.com/menta1/aynur-bulatov-TestAndroid-vacc-2024/releases/download/qwe/app-debug.apk))
 
 Создать структуру проекта 30 минут -> 20 минут
 
