@@ -4,5 +4,8 @@ data class ProductModel(
     val id: Int,
     val name: String,
     val category: String,
-    val thumbnail: String
+    val thumbnail: String,
+    val price: String,
+    val description: String,
+    val rating: String,
 )

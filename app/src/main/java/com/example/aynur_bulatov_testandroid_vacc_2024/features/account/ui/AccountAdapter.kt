@@ -1,4 +1,4 @@
-package com.example.aynur_bulatov_testandroid_vacc_2024.features.mainScreen.ui
+package com.example.aynur_bulatov_testandroid_vacc_2024.features.account.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,28 +8,27 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.aynur_bulatov_testandroid_vacc_2024.R
-import com.example.aynur_bulatov_testandroid_vacc_2024.databinding.ProductBinding
+import com.example.aynur_bulatov_testandroid_vacc_2024.databinding.BuyItemBinding
 import com.example.aynur_bulatov_testandroid_vacc_2024.features.mainScreen.data.ProductModel
 
-class ProdAdapter(private val onClick: (product: ProductModel) -> Unit) :
-    RecyclerView.Adapter<ProdAdapter.ProdViewHolder>() {
+
+class AccountAdapter(private val onClick: (product: ProductModel) -> Unit) :
+    RecyclerView.Adapter<AccountAdapter.AccountViewHolder>() {
 
     private var itemList = emptyList<ProductModel>()
 
     fun setData(newData: List<ProductModel>) {
         val diffResult = DiffUtil.calculateDiff(ItemDiffCallback(itemList, newData))
-        itemList += newData
+        itemList = newData
         diffResult.dispatchUpdatesTo(this)
     }
 
-    inner class ProdViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val binding = ProductBinding.bind(itemView)
+    inner class AccountViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val binding = BuyItemBinding.bind(itemView)
 
         fun bind(productModel: ProductModel, onClick: (product: ProductModel) -> Unit) =
             with(binding) {
-                name.text = productModel.name
-                rating.text = productModel.rating
-                price.text = StringBuilder().append(productModel.price).append(" $")
+                text.text = productModel.name
                 itemView.setOnClickListener {
                     onClick(productModel)
                 }
@@ -37,7 +36,7 @@ class ProdAdapter(private val onClick: (product: ProductModel) -> Unit) :
                     .load(productModel.thumbnail)
                     .centerCrop()
                     .transform(RoundedCorners(2))
-                    .into(imageView2)
+                    .into(image)
             }
     }
 
@@ -58,14 +57,14 @@ class ProdAdapter(private val onClick: (product: ProductModel) -> Unit) :
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.product, parent, false)
-        return ProdViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccountViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.buy_item, parent, false)
+        return AccountViewHolder(view)
     }
 
     override fun getItemCount(): Int = itemList.size
 
-    override fun onBindViewHolder(holder: ProdViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AccountViewHolder, position: Int) {
         holder.bind(itemList[position], onClick)
     }
 }

@@ -1,13 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".features.detailsScreen.ui.DetailsScreenFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/nameDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnail" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="Описание: "
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCat" />
+
+    <TextView
+        android:id="@+id/descVar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/desc"
+        app:layout_constraintTop_toBottomOf="@+id/desc" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Добавить в корзину"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Рейтинг: "
+        app:layout_constraintStart_toStartOf="@+id/descVar"
+        app:layout_constraintTop_toBottomOf="@+id/descVar" />
+
+    <TextView
+        android:id="@+id/ratingVar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/buttonCat"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="0dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameDetails" />
+
+    <Button
+        android:id="@+id/button_price"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:padding="0dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/buttonCat"
+        app:layout_constraintTop_toTopOf="@+id/buttonCat" />
+</androidx.constraintlayout.widget.ConstraintLayout>

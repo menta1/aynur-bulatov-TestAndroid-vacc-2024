@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">aynur-bulatov-TestAndroid-vacc-2024</string>
+    <string name="reg">Регистрация</string>
+    <string name="guest">Войти как гость</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="buy">Купить</string>
+    <string name="in">Войти</string>
 </resources>

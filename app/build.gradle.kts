@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.symbol.processing)
     alias(libs.plugins.dagger.hilt.android)
     alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.navigation.safeargs)
 }
 
 android {
@@ -51,6 +52,7 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.firebase.auth.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -71,9 +73,11 @@ dependencies {
     implementation(platform(libs.google.firebase.bom))
 
     implementation(libs.retrofit)
+    implementation(libs.retrofit.converter)
 
     implementation(libs.androidx.navigation.ui)
     implementation(libs.androidx.navigation.fragment)
+
 
     implementation(libs.androidx.lifecycle.viewmodel)
     implementation(libs.com.github.bumptech.glide)

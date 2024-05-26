@@ -5,4 +5,5 @@ plugins {
     alias(libs.plugins.kotlin.symbol.processing) apply false
     alias(libs.plugins.dagger.hilt.android) apply false
     alias(libs.plugins.google.gms.google.services) apply false
+    alias(libs.plugins.navigation.safeargs) apply false
 }

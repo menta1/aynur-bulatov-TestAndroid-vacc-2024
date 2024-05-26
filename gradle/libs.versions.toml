@@ -22,6 +22,7 @@ glideVersion = "4.15.1"
 legacySupportV4 = "1.0.0"
 lifecycleLivedataKtx = "2.8.0"
 fragmentKtx = "1.7.1"
+firebaseAuthKtx = "23.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,6 +38,7 @@ hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltA
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter = {module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit"}
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
 androidx-room-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
@@ -48,6 +50,7 @@ com-github-bumptech-compiler = {module = "com.github.bumptech.glide:compiler", v
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -55,4 +58,6 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 kotlin-symbol-processing = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navVersion" }
+navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navVersion" }
 

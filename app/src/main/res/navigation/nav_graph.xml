@@ -19,9 +19,18 @@
         android:name="com.example.aynur_bulatov_testandroid_vacc_2024.features.detailsScreen.ui.DetailsScreenFragment"
         android:label="fragment_details_screen"
         tools:layout="@layout/fragment_details_screen" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="false" />
         <action
             android:id="@+id/action_detailsScreenFragment_to_shoppingCardFragment"
-            app:destination="@id/shoppingCartFragment" />
+            app:destination="@id/shoppingCartFragment"
+            app:popUpTo="@id/shoppingCartFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_detailsScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingCartFragment"
@@ -35,7 +44,12 @@
         tools:layout="@layout/fragment_main_screen" >
         <action
             android:id="@+id/action_mainScreenFragment_to_detailsScreenFragment"
-            app:destination="@id/detailsScreenFragment" />
+            app:destination="@id/detailsScreenFragment" >
+            <argument
+                android:name="id"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
         <action
             android:id="@+id/action_mainScreenFragment_to_shoppingCardFragment"
             app:destination="@id/shoppingCartFragment" />
